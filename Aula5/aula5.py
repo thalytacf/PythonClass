@@ -15,16 +15,20 @@ print ("Maior nota: ", maior)
 
 if (n1<n2 and n1<n3 and n1<n4):
     menor = n1
-elif (n1>n2 and n1>n3 and n1>n4):
-    menor = n1
-elif (n2>n1 and n2>n3 and n2>n4):
+elif (n2<n1 and n2<n3 and n2<n4):
     menor = n2
-elif (n1>n2 and n1>n3 and n1>n4):
+elif (n3<n1 and n3<n2 and n3<n4):
     menor = n3
 else:
     menor = n4
-print ("Menor nota: ", menor)):
+print ("Menor nota: ", menor)
 
 
+media = (n1+n2+n3+n4)/4
 
+if (media>=7):
+    print ("Aprovado")
+else:
+    print ("Reprovado")
 
+#TONATV
