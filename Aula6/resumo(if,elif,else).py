@@ -1,3 +1,5 @@
+print('='*70)
+#___Resumo de Tomada de Desições (if + elif + else)
 idade = 25
 
 if(idade < 18):
@@ -6,9 +8,4 @@ elif (idade == 18):
     print('Silasco')
 else:
     print('SilascoMaisAinda')
-ativo = True
-#Validação com Booleano
-if (ativo):
-    print('Logar')
-else:
-    print('Não pode')
+print('='*70)

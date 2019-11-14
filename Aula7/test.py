@@ -16,5 +16,5 @@ for i in range (1,11):
     dicionario_dados['cpf'] = input ('CPF: ')
     dicionario_dados['rg'] = input ('RG: ')
     lista_pessoas.append (dicionario_dados)
-    
-print (lista_pessoas)
+for dicionario_dados in lista_pessoas:
+    print (lista_pessoas)

@@ -29,7 +29,7 @@ for i in range (0,7):
 
 print ('='*70)
 
-#___Impressão de lista usando FOR IT (sem range) - aumeuntando a lista
+#___Impressão de lista usando FOREACH (sem range) - aumeuntando a lista
 lista.append('Natan')
 for sortudo in  lista:
     print(sortudo)

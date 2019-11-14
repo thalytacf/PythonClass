@@ -1,8 +1,8 @@
-#lista = []
-#dicionario = { 'chave':'valor', 'Nome':'Thalyta', 'Sobrenome':'Ficher'}
+lista = []
+dicionario = { 'chave':'valor', 'Nome':'Thalyta', 'Sobrenome':'Ficher'}
 
-#print (dicionario)
-#print (dicionario ['Sobrenome'])
+print (dicionario)
+print (dicionario ['Sobrenome'])
 
 nome = 'Thalyta'
 listasnotas = [10,20,50,70]
