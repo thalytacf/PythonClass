@@ -13,4 +13,28 @@
 #---         de 3751,06 ate 4664,68 - percetual = 22,5%
 #---         de 4664,69 ate ------- - percetual = 27,5%
 #--- Base - http://www.calculador.com.br/calculo/salario-liquido 
+# nome_completo = input('Digite seu nome completo: ')
+# cpf = input('Digite seu CPF: ')
+# num_registro = input('Digite seu registro: ')
+# cargo = input('Digite seu cargo: ')
+# salario = float(input('Digite seu salario: '))
 
+
+from calc_imposto import
+print ('='*50)
+
+salario = float(input('Digite seu salario: '))
+#essas variaveis independe do metodo
+#salvando o retorno em uma variavel
+inss= calculo_inss(salario)
+irrf = calc_irrf(salario, inss)
+salario_lqd = salario - inss - irrf 
+
+
+
+
+print ('='*50)
+print(f'INSS:{inss}')
+print(f'IRRF:{irrf}')
+print (f'Seu salario liquido é {salario_lqd}')
+print ('='*50)
