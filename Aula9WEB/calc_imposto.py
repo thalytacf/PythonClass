@@ -8,7 +8,7 @@ def calc_inss (salario):
         inss = salario * 0.11
     else:
         inss = 642.3395 
-    return ins
+    return inss
 
 def calc_irrf (salario, inss):
     if (salario>2826.65 and salario <= 3751.05):
