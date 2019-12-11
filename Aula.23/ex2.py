@@ -44,13 +44,17 @@ class Pessoa:
         arquivo.write(f'{self.codigo};{self.nome};{self.idade};{self.sexo};{self.email};{self.telefone}\n')
         arquivo.close()
 
-    #def update ()
+    def update (self)
         #Lista????
 
 dadobruto = '1;Arnaldo;23;m;alexcabeludo2@hotmail.com;014908648117'
 pess = Pessoa(dadobruto)
 pess.salvar()
 pess.tratar_dados()
+
+
+
+
 
 #arquivo.write(f'{self.codigo};{self.nome};{self.idade};{self.sexo};{self.email};{self.telefone}\n')
 #arquivo.write(f'{pessoa[0]};{pessoa[1]};{pessoa[2]};{pessoa[3]};{pessoa[4]};{pessoa[5]}\n')
