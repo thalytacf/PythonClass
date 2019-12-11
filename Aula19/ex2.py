@@ -18,3 +18,4 @@ pess   = [  ['Alex'   ,'Paulo'  ,'Pedro'  ,'Mateus' ,'Carlos' ,'João'   ,'Joaqu
 #
 #  3 - Imprima a lista resultante com um for imprimindo um dicionário em cada linha 
 # (usando o f-string)
+

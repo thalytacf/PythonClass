@@ -21,6 +21,8 @@ print(f'{cab[3]} de {dados[0][4]} é {dados[3][4]} anos')
 print(f'{cab[2]} de {dados[0][3]} é {dados[2][3]}')
 print('='*30)
 # 2 - usando o for, imprima todos nomes um abaixo do outro
+
+
 i=-1
 for i in range(7):
     print(f'{dados[0][i]}')
