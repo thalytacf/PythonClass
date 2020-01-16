@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ENDEREÇOS</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>RUA</th>
+                <th>NUMERO</th>
+                <th>COMPLEMENTO</th>
+                <th>BAIRRO</th>
+                <th>CIDADE</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for y in lista %}
+            <tr>
+                <td>{{ y.id}}</td>
+                <td>{{ y.rua}}</td>
+                <td>{{ y.numero}}</td>
+                <td>{{ y.complemento}}</td>
+                <td>{{ y.bairro}}</td>
+                <td>{{ y.cidade}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
