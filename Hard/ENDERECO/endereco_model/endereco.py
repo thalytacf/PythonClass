@@ -12,6 +12,7 @@ class Endereco:
             #---- Percorre a lista de dicionário e salva no arquivo em formato pré-definido
             for x in lista_enderecos:
                 arquivo.write(f"{str(x)}\n")
-    
+
     def __str__(self):
+        #Para transforar em string
         return f'{self.id};{self.rua};{self.numero};{self.complemento};{self.baiiro};{self.cidade}'
