@@ -3,7 +3,6 @@ from model.squad_model import Squad
 
 class SquadController:
     dao = SquadBD()
-    squad_controller = SquadController()
 
     def listar_todos(self):
         lista_squads = []
@@ -37,4 +36,4 @@ class SquadController:
         return self.dao.alterar(squad)
 
     def deletar(self, id):
-        self.dao.deletar(id)
+        return self.dao.deletar(id)

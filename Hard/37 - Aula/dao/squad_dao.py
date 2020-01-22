@@ -1,10 +1,12 @@
 import MySQLdb
+from model.squad_model import Squad
 
 class SquadBD:
-    conexao = MySQLdb.connect(host='mysql.topskills.study', database='topskills01', user='topskills01', passwd='ts2019')
-    cursor = conexao.cursor()
+    def __init__(self):
+        self.conexao = MySQLdb.connect(host='mysql.topskills.study', database='topskills01', user='topskills01', passwd='ts2019')
+        self.cursor = self.conexao.cursor()
 
-    def listar_todos():
+    def listar_todos(self):
         comando_sql_select = "SELECT * FROM 02_TCF_SQUAD"
         self.cursor.execute(comando_sql_select)
         resultado = self.cursor.fetchall()
@@ -30,8 +32,8 @@ class SquadBD:
             '{squad.nome}',
             '{squad.descricao}',
             {squad.numpessoas},
-            {squad.backend},
-            {squad.frontend}
+            '{squad.backend}',
+            '{squad.frontend}'
         )"""
         self.cursor.execute(comando)
         self.conexao.commit()
@@ -44,8 +46,8 @@ class SquadBD:
             NOME = '{squad.nome}',
             DESCRICAO ='{squad.descricao}',
             NUMEROPESSOAS = {squad.numpessoas},
-            LINGUAGEMBACKEND = {squad.backend}
-            FRAMEWORKFRONTEND = {squad.frontend}
+            LINGUAGEMBACKEND = '{squad.backend}',
+            FRAMEWORKFRONTEND = '{squad.frontend}'
         WHERE ID = {squad.id}
         """
         self.cursor.execute(comando)
