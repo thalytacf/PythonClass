@@ -1,0 +1,80 @@
+body{
+    background: #FCF4EC;
+    color: #000000;
+}
+
+/* Formularios */
+/
+form{
+    width: 60%;
+    margin: 2em auto ;
+    padding: 3em 4em 2em;
+    border: 1px solid #FF9F97;
+}
+.editar{
+    color: #FF5782;
+    padding: 0.2em;
+    text-decoration: none;
+    background:#FCF4EC;
+}
+.editar:hover{
+    color:#FF5782;
+    background:#FCF4EC;
+    border:1px solid #FF9F97;
+}
+.excluir{
+    padding: 0.2em;
+    text-decoration: none;
+    color:#FF5782;
+    background:#FCF4EC;
+}
+.excluir:hover{
+    color:#FF5782;
+    background:#FCF4EC;
+    border: 1px solid;
+}
+
+.salvar{
+    background:  #FCF4EC;
+    color: #FF5782;
+    padding: 1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 10em;
+}
+.salvar:hover
+{
+    color: #FF5782;
+    background: #FCF4EC;
+    border: 1px solid #FF9F97;
+}
+.limpar{
+    padding: 0.6em 1em;
+    background: #FCF4EC;
+    color: #FF5782;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 12em;
+}
+.limpar:hover
+{
+    color:#FF5782;
+    background: #FCF4EC;
+    border: 1px solid #FF9F97;
+}
+input[type='text']{
+    padding: 1em 1.5em;
+    width: 60%;
+    margin-bottom: 1em;
+    border-radius: 8px;
+}
+.descricoes{
+    color: #FF5782;
+    width: 20%;
+    text-align: right;
+    margin-right: 10px;
+    text-transform: uppercase;
+}
+input[type='text'] , .descricoes{
+    display: inline-block;
+}
