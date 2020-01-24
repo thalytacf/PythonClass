@@ -12,12 +12,27 @@ nome = 'Cadastro de Squads'
 def inicio():
     return render_template('homepage.html', titulo_app = nome)
 
+@app.route('/listarfront')
+def listar():
+    squads = squad_controller.listar_todos()
+    return render_template('listarfront.html', titulo_app = nome, lista = squads)
+    
+@app.route('/listarback')
+def listar():
+    squads = squad_controller.listar_todos()
+    return render_template('listarback.html', titulo_app = nome, lista = squads)
+
+@app.route('/listarsgbds')
+def listar():
+    squads = squad_controller.listar_todos()
+    return render_template('listarsgbds.html', titulo_app = nome, lista = squads)
+
 @app.route('/listar')
 def listar():
     squads = squad_controller.listar_todos()
     return render_template('listar.html', titulo_app = nome, lista = squads)
 
-@app.route('/cadastrar')
+@app.route('/cadastrarsquads')
 def cadastrar():
     squad = Squad()
     if 'id' in request.args:

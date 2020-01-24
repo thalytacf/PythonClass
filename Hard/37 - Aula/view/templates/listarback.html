@@ -10,15 +10,12 @@
 <body> 
     <div class="conteudo">
         <a class='cadastro' href="/cadastrar">Cadastrar</a>
-        <table id='tabela-squads'>
+        <table id='tabela-back'>
             <thead>
                 <tr> 
-                    <th>SquadId</th>
+                    <th>BackId</th>
                     <th>Nome</th>
-                    <th>Descrição</th>
-                    <th>Numero de Pessoas</th>
-                    <th>Linguagem Backend</th>
-                    <th>Framework Frontend</th>
+                    <th>Versão</th>
                     <th></th>
                 </tr>
             </thead>
@@ -27,10 +24,7 @@
                 <tr>
                     <td>{{ p.id }}</td>
                     <td>{{ p.nome }}</td>
-                    <td>{{ p.descricao }}</td>
-                    <td>{{ p.numpessoas }}</td>
-                    <td>{{ p.backend}}</td>
-                    <td>{{ p.frontend}}</td>
+                    <td>{{ p.versao }}</td>
                     <td>
                         <a href="/cadastrar?id={{ p.id }}" class="editar">Editar</a>
                         <a href="/excluir?id={{ p.id }}" class="excluir">Excluir</a>

@@ -1,0 +1,69 @@
+body{
+    background: #ffffff;
+    color: #3A4161;
+}
+.cadastrar{
+    background: #ffffff;
+    color: #E850AA;
+    padding: 1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 10em;
+}
+.cadastrar:hover{
+    color:#E850AA;
+    background: #b1b2ba;
+    border: 2px solid #3A4161;
+}
+.listarfront{
+    background: #ffffff;
+    color: #E850AA;
+    padding: 1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 10em;
+}
+.listafront:hover{
+    color:#E850AA;
+    background: #b1b2ba;
+    border: 2px solid #3A4161;
+}
+.listarback{
+    background: #ffffff;
+    color: #E850AA;
+    padding: 1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 10em;
+}
+.listarback:hover{
+    color:#E850AA;
+    background: #b1b2ba;
+    border: 2px solid #3A4161;
+}
+.listarsgbds{
+    background: #ffffff;
+    color: #E850AA;
+    padding: 1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 10em;
+}
+.listarsgbds:hover{
+    color:#E850AA;
+    background: #b1b2ba;
+    border: 2px solid #3A4161;
+}
+.listar{
+    background: #ffffff;
+    color: #E850AA;
+    padding: 1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 10em;
+}
+.listar:hover{
+    color:#E850AA;
+    background: #b1b2ba;
+    border: 2px solid #3A4161;
+}

@@ -5,17 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{titulo_app}} - Cadastrar</title>
-    <link rel="stylesheet" href="../static/estilo.css">
+    <link rel="stylesheet" href="../static/cadastro.css">
 </head>
 <body>
-        <link rel="stylesheet"  href="..static/estilo.css">
     <div class="conteudo">
         <form action="/salvar" method="get">
             <input type="hidden" name="id" id="id" value="{{pessoa.id}}"> <br/>
             <div class="descricoes"> 
                 <label for="nome">Nome:</label>
             </div>
-            <input type="text" name="nome" id="nome" placeholder="Digite o nome" value="{{pessoa.nome}}"> <br/>
+            <input type="text" name="nome" id="nome"  value="{{pessoa.nome}}"> <br/>
             <div class="descricoes"> 
                 <label for="descricao">Descrição:</label>
             </div>
@@ -34,7 +33,7 @@
             <input type="text" name="frontend" id="frontend" value="{{pessoa.frontend}}"> <br/> 
             <hr/>
             <input type="submit" value="Salvar" class="salvar">
-            <a href="/cadastrar" class="limpar">Limpar</a>
+            <a href="/cadastrar" class="limpar btn">Limpar</a>
         </form>
     </div>
 </body>
