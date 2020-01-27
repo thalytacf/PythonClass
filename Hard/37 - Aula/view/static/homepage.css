@@ -2,6 +2,9 @@ body{
     font-weight: bold;
     background: #ffffff;
     color: #3A4161;
+     margin: 3em auto 2em;
+    border-collapse: collapse;
+    border-radius: 1em;
 }
 .cadastrar{
     background: #ffffff;
@@ -79,3 +82,4 @@ body{
     align-items: flex-start;
     text-align: center; 
     box-sizing: border-box;
+}
