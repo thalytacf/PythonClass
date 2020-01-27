@@ -1,39 +1,89 @@
-from dao.squad_dao import SquadBD
-from model.squad_model import Squad
+from dao.squad_dao import SquadDao
+from dao.backend_dao import BackEndDao
+from dao.frontend_dao import FrontEndDao
+from dao.sgbd_dao import SgbdDao
+
+from model.squad import Squad
+from model.backend import BackEnd
+from model.frontend import FrontEnd
+from model.sgbd import Sgbd
+
+from controller.backend_controller import BackEndController
+from controller.frontend_controller import FrontEndController
+from controller.sgbd_controller import SgbdController
 
 class SquadController:
-    dao = SquadBD()
+
+    def __init__(self):
+        self.squad_dao = SquadDao()
+        self.backend_dao = BackEndDao()
+        self.frontend_dao = FrontEndDao()
+        self.sgbd_dao = SgbdDao()
+
+        self.backend_controller = BackEndController()
+        self.frontend_controller = FrontEndController()
+        self.sgbd_controller = SgbdController()
 
     def listar_todos(self):
         lista_squads = []
-        lista_tuplas = self.dao.listar_todos()
-        for x in lista_tuplas:
-            squad = Squad()
-            squad.id =  x[0]
-            squad.nome = x[1]
-            squad.descricao = x[2]
-            squad.numpessoas = x[3]
-            squad.backend = x[4]
-            squad.frontend = x[5]
-            lista_squads.append(squad)
+        lista_tuplas_squads = self.squad_dao.listar_todos()
+        for s in lista_tuplas_squads:
+            s1 = Squad()
+            s1.id = s[0]
+            s1.nome = s[1]
+            s1.descricao= s[2]
+            s1.numpessoas = s[3]
+            lista_tuplas_backend = self.backend_dao.buscar_por_squad(s1.id)
+            i=0
+            for b in range(len(lista_tuplas_backend)):
+                if lista_tuplas_backend[i][0] != None:
+                    s1.backend.append(lista_tuplas_backend[i][0])
+                i+=1
+            lista_tuplas_frontend = self.frontend_dao.buscar_por_squad(s1.id)
+            i=0
+            for f in range(len(lista_tuplas_frontend)):
+                if lista_tuplas_frontend[i][0] != None:
+                    s1.frontend.append(lista_tuplas_frontend[i][0])
+                i+=1
+            lista_tuplas_sgbd = self.sgbd_dao.buscar_por_squad(s1.id)
+            i=0
+            for sg in range(len(lista_tuplas_sgbd)):
+                if lista_tuplas_sgbd[i][0] != None:
+                    s1.sgbd.append(lista_tuplas_sgbd[i][0])
+                i+=1
+            lista_squads.append(s1)
         return lista_squads
 
     def buscar_por_id(self, id):
-        x = self.dao.buscar_por_id(id)
-        squad = Squad()
-        squad.id =  x[0]
-        squad.nome = x[1]
-        squad.descricao = x[2]
-        squad.numpessoas = x[3]
-        squad.backend = x[4]
-        squad.frontend = x[5]
-        return squad
+        s = self.squad_dao.buscar_por_id(id)
+        s1 = Squad()
+        s1.id = s[0]
+        s1.nome = s[1]
+        s1.descricao= s[2]
+        s1.numpessoas = s[3]
+        lista_tuplas_backend = self.backend_dao.buscar_por_squad(s1.id)
+        i=0
+        for b in range(len(lista_tuplas_backend)):
+            s1.backend.append(lista_tuplas_backend[i])
+            i+=1
+        lista_tuplas_frontend = self.frontend_dao.buscar_por_squad(s1.id)
+        i=0
+        for f in range(len(lista_tuplas_frontend)):
+            s1.frontend.append(lista_tuplas_frontend[i])
+            i+=1
+        lista_tuplas_sgbd = self.sgbd_dao.buscar_por_squad(s1.id)
+        i=0
+        for sg in range(len(lista_tuplas_sgbd)):
+            s1.sgbd.append(lista_tuplas_sgbd[i])
+            i+=1
+        return s1
+
 
     def salvar(self, squad:Squad):
-        return self.dao.salvar(squad)
+        return self.squad_dao.salvar(squad)
 
     def alterar(self, squad:Squad):
-        return self.dao.alterar(squad)
+        self.squad_dao.alterar(squad)
 
     def deletar(self, id):
-        return self.dao.deletar(id)
+        self.squad_dao.deletar(id)

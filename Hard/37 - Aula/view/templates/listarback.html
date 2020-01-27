@@ -9,8 +9,9 @@
 </head>
 <body> 
     <div class="conteudo">
-        <a class='cadastro' href="/cadastrar">Cadastrar</a>
-        <table id='tabela-back'>
+        <a class='menu' href="/">Inicio</a>
+        <a class='cadastro' href="/cadastrarback">Cadastrar</a>
+        <table id='tabela-squads'>
             <thead>
                 <tr> 
                     <th>BackId</th>
@@ -26,8 +27,8 @@
                     <td>{{ p.nome }}</td>
                     <td>{{ p.versao }}</td>
                     <td>
-                        <a href="/cadastrar?id={{ p.id }}" class="editar btn">Editar</a>
-                        <a href="/excluir?id={{ p.id }}" class="excluir btn">Excluir</a>
+                        <a href="/cadastrarback?id={{ p.id }}" class="editar btn">Editar</a>
+                        <a href="/excluirback?id={{ p.id }}" class="excluir btn">Excluir</a>
                     </td>
                 </tr>
                 {% endfor %}
