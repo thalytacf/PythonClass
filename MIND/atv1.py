@@ -31,27 +31,42 @@ e, portanto, sem lacunas binárias.
 #         num = bin(self.n)
 #         lista_num = []
 
+# passador=False
+# def convert_to_binary(natural_number):
+#
+#     natural_number_to_binary = bin(natural_number)
+#     x_binary = natural_number_to_binary[2:]
+#     return x_binary
+#
+# def count_binary_space(binary):
+#     list=[]
+#     for i in binary:
+#         list.append(i)
+#
+#     print(list)
+#     x=(len(list)-1)
+#
+#     for i in range(1,x):
+#         if '1' in list[i]:
+#             passador=True
+#
+#
+#     if passador==False and "1" in list[0] and '1' not in list[x]:
+#         print("aarafafa")
+#         return 0
+#
+#     list_with_zeros = binary.split('1') #splited '1', now we have a list with only zeros
+#     max_zero_in_list = len(max(list_with_zeros))
+#     message = f'o maior intervalo binário de {binary} é {max_zero_in_list}'
+#     return print(message)
+#
+# x = convert_to_binary(32)
+# count_binary_space(x)
 
 
+def solution(N):
+    n_bin = bin(N)[2:]
+    result = n_bin.strip('0').strip('1').split('1')
+    return len(max(result))
 
-def insere_bin_lista(numero):
-    numero_bin = bin(numero)
-    convert_bin_to_str = numero_bin.__str__()
-    lista_bin = [int(bin) for bin in convert_bin_to_str]
-    lista_bin.pop(0)[2:]
-    lista_bin.pop(0)
-    return lista_bin
-
-
-lista_binarios = insere_bin_lista(20)
-print(lista_binarios)
-
-def logica_binario(lista_binarios):
-    if lista_binarios.__contains__('0'):
-        print('tem zero')
-    else:
-        print('Só tem o número 1')
-        # if lista_binarios.index('1') == '0':
-        #     lista_binarios.pop(0)
-
-print()
+print(solution(15))
