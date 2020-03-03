@@ -14,3 +14,5 @@ a = ''
 for item in lista:
     a.join(item)
 print(a)
+
+#alteração para commit
