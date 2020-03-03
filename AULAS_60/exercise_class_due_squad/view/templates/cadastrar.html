@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{titulo_app}} - Cadastrar</title>
+    <link rel="stylesheet" href="../static/cadastro.css">
+</head>
+<body>
+    <div class="conteudo">
+        <form action="/salvar" method="get">
+            <input type="hidden" name="id" id="id" value="{{squad.id}}"> <br/>
+            <div class="descricoes"> 
+                <label for="nome">Nome:</label>
+            </div>
+            <input type="text" name="nome" id="nome"  value="{{squad.nome}}"> <br/>
+            <div class="descricoes"> 
+                <label for="descricao">Descrição:</label>
+            </div>
+            <input type="text" name="descricao" id="descricao" value="{{squad.descricao}}"> <br/>
+            <div class="descricoes"> 
+                <label for="numpessoas">Numero de Pessoas:</label>
+            </div>
+            <input type="text" name="numpessoas" id="numpessoas" value="{{squad.numpessoas if squad.numpessoas != 0 else ''}}"> <br/>
+            <div class="descricoes"> 
+                <label for="backend0">Linguagem Backend - 1:</label>
+            </div>
+            <input type="text" name="backend0" id="backend0" value="{{squad.backend0}}"> <br/>
+            <div class="descricoes"> 
+                <label for="backend1">Linguagem Backend - 2:</label>
+            </div>
+            <input type="text" name="backend1" id="backend1" value="{{squad.backend1}}"> <br/>
+            <div class="descricoes"> 
+                <label for="frontend0">Framework Frontend - 1:</label>
+            </div>
+            <input type="text" name="frontend0" id="frontend0" value="{{squad.frontend0}}"> <br/>
+            <div class="descricoes"> 
+                <label for="frontend1">Framework Frontend - 2:</label>
+            </div>
+            <input type="text" name="frontend1" id="frontend1" value="{{squad.frontend1}}"> <br/>
+            <div class="descricoes"> 
+                    <label for="sgbd">SGBD:</label>
+                </div>
+                <input type="text" name="sgbd" id="sgbd"> <br/>
+            <tr>
+            Código Back-End:
+            {% for b in lista_back %}
+            <td>{{ b.id }}-{{ b.nome }} </td>
+            {% endfor %}<br>
+            Código Front-End:
+            {% for f in lista_front %}
+            <td>{{ f.id }}-{{ f.nome }} </td>
+            {% endfor %}<br>
+            Código SGBD:
+            {% for sg in lista_sgbd %}
+            <td>{{ sg.id }}-{{ sg.nome }} </td>
+            {% endfor %}<br>         
+
+            </tr>
+            <hr/>
+            <input type="submit" value="Salvar" class="salvar">
+            <a href="/cadastrar" class="limpar btn">Limpar</a>
+        </form>
+    </div>
+</body>
+</html>

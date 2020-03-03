@@ -1,0 +1,87 @@
+body{
+    font-weight: bold;
+    text-align: center;
+    background: #ffffff;
+    color: #3A4161;
+    margin: 10em 3em 3em;
+    border-collapse: collapse;
+    border-radius: 1em;
+}
+.cadastrar{
+    background: #ffffff;
+    color: #E850AA;
+    padding: 1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 13em;
+}
+.cadastrar:hover{
+    color:#E850AA;
+    background: #b1b2ba;
+    border: 2px solid #3A4161;
+}
+.listarfront{
+    margin-left: auto;
+    background: #ffffff;
+    color: #E850AA;
+    padding: 1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 13em;
+}
+.listarfront:hover{
+    color:#E850AA;
+    background: #b1b2ba;
+    border: 2px solid #3A4161;
+}
+.listarback{
+    background: #ffffff;
+    color: #E850AA;
+    padding: 1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 13em;
+}
+.listarback:hover{
+    color:#E850AA;
+    background: #b1b2ba;
+    border: 2px solid #3A4161;
+}
+.listarsgbds{
+    background: #ffffff;
+    color: #E850AA;
+    padding: 1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 13em;
+}
+.listarsgbds:hover{
+    color:#E850AA;
+    background: #b1b2ba;
+    border: 2px solid #3A4161;
+}
+.listar{
+    background: #ffffff;
+    color: #E850AA;
+    padding: 1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 13em;
+}
+.listar:hover{
+    color:#E850AA;
+    background: #b1b2ba;
+    border: 2px solid #3A4161;
+}
+.btn{
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+    border-image: initial;
+    -webkit-appearance: push-button;
+    user-select: none;
+    white-space: pre;
+    align-items: flex-start;
+    text-align: center; 
+    box-sizing: border-box;
+}
